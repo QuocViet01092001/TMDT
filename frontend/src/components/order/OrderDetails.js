@@ -16,7 +16,7 @@ const OrderDetails = ({ match }) => {
     const { loading, error, order = {} } = useSelector(state => state.orderDetails)
     const { payload } = useSelector(state => state.orderDetailsId)
     const { shippingInfo, paymentInfo, user, totalPrice, orderStatus } = order
-//update Orders
+    
     useEffect(() => {
         dispatch(getOrderDetails(match.params.id));
         dispatch(getOrderDetailsId(match.params.id));
