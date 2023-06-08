@@ -68,7 +68,7 @@ const OrderDetails = ({ match }) => {
 
                             <hr />
                             <div className="cart-item my-1">
-                                {orderItems && orderItems.map(item => (
+                                {payload && payload.map(item => (
                                     <div key={item.product} className="row my-5">
                                         <div className="col-4 col-lg-2">
                                             <img src={item.image} alt={item.name} height="45" width="65" />
