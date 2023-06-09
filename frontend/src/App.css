@@ -25,12 +25,14 @@ body {
   background-clip: padding-box;
   border-radius: 5px;
 }
+
 /*------------------------header--------------------------*/
 nav {
   background-color: #b9b6b6;
-  padding:10px;
-  
+  padding: 10px;
+
 }
+
 /* .navbar.row{
   position: fixed;
     left: 0;
@@ -42,15 +44,18 @@ nav {
 #search_btn {
   background-color: #f3f3f3;
 }
+
 .input-group {
   width: 90%;
   margin-right: 35%;
   color: red;
 }
+
 #search_field {
   height: 2.4rem;
   padding: 1rem;
 }
+
 /*--------------------------logo--------------------------*/
 .navbar-brand {
   font-size: 20px;
@@ -58,14 +63,17 @@ nav {
   color: #333;
   text-decoration: none;
 }
+
 .navbar-brand a {
   display: block;
   padding: 10px;
   color: #000;
 }
+
 .navbar-brand a:hover {
   color: #ff0000;
 }
+
 /*-----------------------Đăng nhập-------------------------*/
 #login_btn,
 #view_btn {
@@ -75,14 +83,17 @@ nav {
   color: black;
   font-size: 1rem;
 }
-#login_btn:hover{
+
+#login_btn:hover {
   color: #ff0000;
 }
+
 /*------------------------Giỏ hàng---------------------------*/
 #cart {
   font-size: 1rem;
   color: black;
 }
+
 #cart_count {
   /*background-color: #f3f3f3;*/
   /*padding: 1rem 3rem;*/
@@ -91,6 +102,7 @@ nav {
   font-weight: bold;
   font-size: 1rem;
 }
+
 .ml-1 i:hover {
   color: #ff0000;
 }
@@ -99,21 +111,30 @@ nav {
 #products_heading {
   margin-top: 1.8rem;
 }
+
 .card {
   height: 100%;
 }
+
 .card-title a {
   color: #2e2e2e;
 }
+
 .card-title a:hover {
   color: #fa9c23;
   text-decoration: none;
 }
+
 .card-body {
   padding-left: 0;
 }
+
 .card-text {
   font-size: 1.4rem;
+}
+
+.card.card.p-3.rounded {
+  padding: 0rem!important;
 }
 
 #view_btn {
@@ -141,12 +162,14 @@ nav {
   color: grey;
   margin-left: 0.5rem;
 }
+
 /*------Hiển thị tên sản phẩm không quá 15kí tự-------*/
 .product-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 /*------------------------Footer---------------------------*/
 footer {
   margin-top: 8rem;
@@ -155,42 +178,53 @@ footer {
   width: 100%;
   background-color: #b9b6b6;
 }
-.text a{
-  color:blue;
+
+.text a {
+  color: blue;
 }
-.text a:hover{
-  color:red;
+
+.text a:hover {
+  color: red;
 }
-.single-footer ul{
+
+.single-footer ul {
   padding-left: 0rem;
 }
+
 .single-footer li {
   list-style-type: none;
 }
-.single-footer li a{
+
+.single-footer li a {
   color: black;
 }
-.single-footer li a:hover{
-  color:red;
+
+.single-footer li a:hover {
+  color: red;
 }
-.single-footer .text a{
-  color:blue;
+
+.single-footer .text a {
+  color: blue;
 }
+
 /*-----------------------logo-footer------------------------*/
-.logo{
+.logo {
   font-size: 20px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
 }
+
 .logo a {
   display: block;
   padding: 10px;
   color: #000;
 }
+
 .logo a:hover {
   color: #ff0000;
 }
+
 /*-------------------------------đánh giá--------------------------------*/
 
 .rating-outer {
@@ -228,6 +262,59 @@ footer {
   font-size: 2rem;
   font-weight: bold;
 }
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price .card-text:first-child {
+  font-size: 0.9em;
+  text-decoration: line-through;
+  color: #b9b6b6;
+}
+
+.price .card-text:last-child {
+  margin-left: 10px;
+}
+
+.price .nodiscount {
+  font-size: 22px;
+  /* margin-left: 183px; */
+}
+
+.image-link {
+  position: relative;
+  display: inline-block;
+}
+
+.corner-text {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: #ee4d2d;
+  color: yellow;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount {
+  font-weight: bold;
+  color: #FFF;
+}
+
+.percent {
+  font-size: 18px;
+}
+
+
+
 
 #cart_btn,
 #review_btn {
@@ -381,7 +468,7 @@ footer {
 
 .wrapper form {
   padding: 2.5rem 3rem;
-  border:2px solid black;
+  border: 2px solid black;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
@@ -580,6 +667,7 @@ footer {
   top: 0;
   z-index: 10;
 }
+
 /*---------------------------------------------*/
 #sidebar {
   min-width: 100%;
@@ -610,10 +698,12 @@ footer {
   color: black;
   text-decoration: none;
 }
+
 #sidebar ul li a:hover {
   color: #232f3e;
   background: #fff;
 }
+
 /*--------------------------------------------*/
 
 #sidebar ul li a i {
@@ -636,6 +726,16 @@ a[data-toggle='collapse'] {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+}
+
+.dropdown-toggle {
+  color: white;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 ul ul a {
@@ -796,7 +896,8 @@ ul.CTAs a {
 }
 
 .button {
-  background: #f0f0f0;/*màu button danh mục sản phẩm*/
+  background: #f0f0f0;
+  /*màu button danh mục sản phẩm*/
   margin: 20px auto;
   width: 200px;
   height: 50px;
@@ -867,6 +968,7 @@ a {
   width: 500px;
   height: 500px;
 }
+
 /*-------------------------------------------------------------------------------------------------*/
 
 /**/
@@ -881,22 +983,27 @@ a {
 .carousel-indicators .active {
   background-color: red;
 }
+
 .carousel-item {
   transition: transform 1s ease-in-out;
 }
+
 /*---------------nút delete trong bảng giỏ hàng khi có sản phẩm-------------*/
 .bi-trash3-fill {
-  font-size: 24px; /* Kích thước ban đầu của icon */
+  font-size: 24px;
+  /* Kích thước ban đầu của icon */
 }
+
 /* .bi-trash3-fill:hover {
   transform: scale(1.5); /* Phóng to icon lên 1.5 lần khi hover */
 /*}*/
 .bi-trash3-fill:hover {
   color: red;
 }
+
 /*---------------*/
 /*.btn-danger {
   background-color: blue; /* Màu nền của button */
- /*color: white; /* Màu chữ trên button */
-  /* Các thuộc tính khác cho button */
+/*color: white; /* Màu chữ trên button */
+/* Các thuộc tính khác cho button */
 /*}*/

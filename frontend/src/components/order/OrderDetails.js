@@ -16,7 +16,7 @@ const OrderDetails = ({ match }) => {
     const { loading, error, order = {} } = useSelector(state => state.orderDetails)
     const { payload } = useSelector(state => state.orderDetailsId)
     const { shippingInfo, paymentInfo, user, totalPrice, orderStatus } = order
-    
+
     useEffect(() => {
         dispatch(getOrderDetails(match.params.id));
         dispatch(getOrderDetailsId(match.params.id));
@@ -29,7 +29,7 @@ const OrderDetails = ({ match }) => {
     const shippingDetails = shippingInfo && `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.postalCode}, ${shippingInfo.country}`
 
     const isPaid = paymentInfo && paymentInfo.status === 'succeeded' ? true : false
-   //chuyển đổi tiền tệ
+    //chuyển đổi tiền tệ
     function formatCurrency(number) {
         const formatter = new Intl.NumberFormat('vi-VN', {
             style: 'currency',
@@ -80,7 +80,7 @@ const OrderDetails = ({ match }) => {
 
 
                                         <div className="col-4 col-lg-2 mt-4 mt-lg-0">
-                                            <p>{(item.price).toLocaleString()}đ</p>
+                                            <p>{(item.price - (item.price * item.discount)).toLocaleString()}đ</p>
                                         </div>
 
                                         <div className="col-4 col-lg-3 mt-4 mt-lg-0">

@@ -115,7 +115,7 @@ const ProcessOrder = ({ match }) => {
 
 
                                                 <div className="col-4 col-lg-2 mt-4 mt-lg-0">
-                                                    <p>{item.price} VNĐ</p>
+                                                    <p>{(item.price - (item.price*item.discount))} VNĐ</p>
                                                 </div>
 
                                                 <div className="col-4 col-lg-3 mt-4 mt-lg-0">

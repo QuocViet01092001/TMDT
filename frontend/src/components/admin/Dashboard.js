@@ -271,12 +271,12 @@ const Dashboard = () => {
                                 <div className='col-md-6'>
                                     <ChartIncome />
                                 </div>
-                                <div className='radar col-md-5 card text-white bg-light'>
+                                {/* <div className='radar col-md-5 card text-white bg-light'>
 
                                     <Radar
                                         data={data}
                                     />
-                                </div>
+                                </div> */}
                             </div>
 
                         </div>

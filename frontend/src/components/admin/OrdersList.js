@@ -85,7 +85,7 @@ const OrdersList = ({ history }) => {
                 id: order._id,
                 numofItems: order.numberOfItems, //update Orders
                 amount: formatCurrency(order.totalPrice),
-                createdAt: order.createdAt,
+                createdAt: new Date(order.createdAt).toLocaleString(),
                 status: order.orderStatus && String(order.orderStatus).includes('Đã giao hàng')
                     ? <p style={{ color: 'green' }}>{order.orderStatus}</p>
                     : <p style={{ color: 'red' }}>{order.orderStatus}</p>,

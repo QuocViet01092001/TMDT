@@ -121,12 +121,12 @@ const Home = ({ match }) => {
                                             </h4>
                                             <Range
                                                 marks={{
-                                                    10000: `10.000`,
-                                                    1000000: `1.000.000`
+                                                    100000: `100.000`,
+                                                    10000000: `10.000.000`
                                                 }}
-                                                min={10}
-                                                max={1000000}
-                                                defaultValue={[1, 1000000]}
+                                                min={100}
+                                                max={10000000}
+                                                defaultValue={[1, 10000000]}
                                                 tipFormatter={value => `${value}`}
                                                 tipProps={{
                                                     placement: "top",

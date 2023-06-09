@@ -42,7 +42,7 @@ const Cart = ({ history }) => {
         <Fragment>
             <MetaData title={'Giỏ hàng của bạn'} />
             {cartItems.length === 0 ?
-            // cart is empty
+                // cart is empty
                 <div className="container-fluid mt-100">
                     <div className="row">
                         <div className="col-md-12">
@@ -83,7 +83,7 @@ const Cart = ({ history }) => {
 
 
                                                 <div className="col-4 col-lg-2 mt-4 mt-lg-0">
-                                                    <p className='text-primary'>{(item.price).toLocaleString()}đ</p>
+                                                    <p className='text-primary'>{((item.price) - (item.price * item.discount)).toLocaleString()}đ</p>
                                                 </div>
 
                                                 <div className="col-4 col-lg-3 mt-4 mt-lg-0">
@@ -115,7 +115,7 @@ const Cart = ({ history }) => {
                                     <h4 className='text-center'>Tổng giá trị đơn hàng</h4>
                                     <hr />
                                     <p>Số lượng:  <span className="order-summary-values">{cartItems.reduce((acc, item) => (acc + Number(item.quantity)), 0)} (Sản phẩm)</span></p>
-                                    <p>Tổng tiền: <span className="order-summary-values">{(cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0)).toLocaleString()}đ</span></p>
+                                    <p>Tổng tiền: <span className="order-summary-values">{(cartItems.reduce((acc, item) => acc + item.quantity * (item.price - (item.price*item.discount)), 0)).toLocaleString()}đ</span></p>
 
                                     <hr />
                                     <button id="checkout_btn" className="btn btn-primary btn-block" onClick={checkoutHandler}>Đặt hàng</button> {/* onClick={checkoutHandler} */}

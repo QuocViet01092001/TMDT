@@ -16,6 +16,7 @@ const UpdateProduct = ({ match, history }) => {
     const [category, setCategory] = useState('');
     const [stock, setStock] = useState(0);
     const [seller, setSeller] = useState('');
+    const [discount, setDiscount] = useState(0);
     const [images, setImages] = useState([]);
 
     const [oldImages, setOldImages] = useState([]);
@@ -82,7 +83,7 @@ const UpdateProduct = ({ match, history }) => {
         formData.set('category', category);
         formData.set('stock', stock);
         formData.set('seller', seller);
-
+        formData.set('discount', discount)
         images.forEach(image => {
             formData.append('images', image)
         })
@@ -171,6 +172,17 @@ const UpdateProduct = ({ match, history }) => {
                                         className="form-control"
                                         value={stock}
                                         onChange={(e) => setStock(e.target.value)}
+                                    />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="discount_field">Phần trăm giảm giá</label>
+                                    <input
+                                        type="number"
+                                        id="discount_field"
+                                        className="form-control"
+                                        value={discount}
+                                        onChange={(e) => setDiscount(e.target.value)}
                                     />
                                 </div>
 

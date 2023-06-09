@@ -150,7 +150,7 @@ const ProductDetails = ({ match }) => {
                             <span id="no_of_reviews">({product.numOfReviews} đánh giá)</span>
 
                             <hr />
-                            <p id="product_price">{formatCurrency(product.price)}</p>
+                            <p id="product_price">{formatCurrency((product.price)- (product.price*product.discount))}</p>
                             <div className="stockCounter d-inline">
                                 <span className="btn btn-danger minus" onClick={decreaseQty}>-</span>
 

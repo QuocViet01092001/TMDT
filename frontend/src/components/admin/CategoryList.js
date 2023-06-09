@@ -38,7 +38,7 @@ const ProducersList = ({ history }) => {
                     sort: 'asc'
                 },
                 {
-                    label: 'Tên nhà sản xuất',
+                    label: 'Tên loại sản phẩm',
                     field: 'name',
                     sort: 'asc'
                 },

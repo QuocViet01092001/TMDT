@@ -54,8 +54,13 @@ const ProductsList = ({ history }) => {
                     sort: 'asc'
                 },
                 {
-                    label: 'Giá',
+                    label: 'Giá gốc',
                     field: 'price',
+                    sort: 'asc'
+                },
+                {
+                    label: 'Giá giảm giá',
+                    field: 'price_discount',
                     sort: 'asc'
                 },
                 {
@@ -76,6 +81,7 @@ const ProductsList = ({ history }) => {
                 id: product._id,
                 name: product.name,
                 price: `${(product.price).toLocaleString()} VNĐ`,
+                price_discount: `${(product.price - (product.price*product.discount)).toLocaleString()} VNĐ`,
                 stock: product.stock,
                 actions: <Fragment>
                     <Link to={`/admin/product/${product._id}`} className="btn btn-primary py-1 px-2">

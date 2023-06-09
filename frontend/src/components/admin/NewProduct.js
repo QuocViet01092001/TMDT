@@ -18,6 +18,7 @@ const NewProduct = ({ history }) => {
     const [stock, setStock] = useState(0);
     const [seller, setSeller] = useState('');
     const [images, setImages] = useState([]);
+    const [discount, setDiscount] = useState(0)
     const [imagesPreview, setImagesPreview] = useState([])
 
     const producers = [
@@ -61,7 +62,7 @@ const NewProduct = ({ history }) => {
         formData.set('category', categoryi);
         formData.set('stock', stock);
         formData.set('seller', seller);
-
+        formData.set('discount', discount)
         images.forEach(image => {
             formData.append('images', image)
         })
@@ -159,6 +160,17 @@ const NewProduct = ({ history }) => {
                                                 <option key= {producer} value={producer}>{producer}</option>
                                             ) )}
                                     </select>
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="discount_field">Phần trăm giảm giá</label>
+                                    <input
+                                        type="number"
+                                        id="discount_field"
+                                        className="form-control"
+                                        value={discount}
+                                        onChange={(e) => setDiscount(e.target.value)}
+                                    />
                                 </div>
 
                                 <div className='form-group'>

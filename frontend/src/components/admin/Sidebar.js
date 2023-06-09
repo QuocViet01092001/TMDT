@@ -27,7 +27,7 @@ const Sidebar = () => {
                         <Link to="/admin/reviews"><i class="bi bi-chat-dots-fill"></i> Quản lý bình luận</Link>
                     </li>
                     <li>
-                        <Link to="/admin/categories"><i class="bi bi-chat-dots-fill"></i> Quản lý nhà sản xuất</Link>
+                        <Link to="/admin/categories"><i class="bi bi-chat-dots-fill"></i> Quản lý loại sản phẩm</Link>
                     </li>
                 </ul>
             </nav>
