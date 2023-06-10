@@ -8,7 +8,7 @@ import Sidebar from './Sidebar'
 
 import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearErrors } from '../../actions/categoryActions'
+import { clearErrors, deleteCategory } from '../../actions/categoryActions'
 import { getAdminCategory } from '../../actions/categoryActions'
 //update category
 const ProducersList = ({ history }) => {
@@ -16,8 +16,9 @@ const ProducersList = ({ history }) => {
     const alert = useAlert();
     const dispatch = useDispatch();
 
+    const { isDeleted } = useSelector(state => state.udCategory);
+
     const { loading, error, category } = useSelector(state => state.category);
-    //const { error: deleteError, isDeleted } = useSelector(state => state.producer)
 
     useEffect(() => {
         dispatch(getAdminCategory());
@@ -27,7 +28,17 @@ const ProducersList = ({ history }) => {
             dispatch(clearErrors())
         }
 
-    }, [dispatch, alert, error, history])
+        if (isDeleted) {
+            alert.success('Category deleted successfully');
+            history.push('/admin/categories');
+            dispatch({ type: 'DELETE_CATEGORY_RESET' })
+        }
+
+    }, [dispatch, alert, error, history, isDeleted])
+
+    const deleteCategoryHandler = (id) =>{
+        dispatch(deleteCategory(id));
+    }
 
     const setProducers = () => {
         const data = {
@@ -60,36 +71,36 @@ const ProducersList = ({ history }) => {
                 id: producer._id,
                 name: producer.name,
                 description: producer.description,
-                // actions: <Fragment>
-                //     <Link to={`/admin/product/${producer._id}`} className="btn btn-primary py-1 px-2">
-                //         <i className="fa fa-pencil"></i>
-                //     </Link>
-                //     <button className="btn btn-danger py-1 px-2 ml-2" data-toggle="modal" data-target="#exampleModal" >
-                //         <i className="fa fa-trash"></i>
-                //     </button>
-                //     {/* model delete */}
-                //     <div>
-                //         <div className="modal fade" id="exampleModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                //             <div className="modal-dialog" role="document">
-                //                 <div className="modal-content">
-                //                     <div className="modal-header">
-                //                         <h5 className="modal-title" id="exampleModalLabel">Thông báo!</h5>
-                //                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                //                             <span aria-hidden="true">×</span>
-                //                         </button>
-                //                     </div>
-                //                     <div class="modal-body">
-                //                         Bạn có muốn xóa không
-                //                     </div>
-                //                     <div className="modal-footer">
-                //                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Hủy</button>
-                //                         <button type="button" className="btn btn-danger" onClick={() => deleteProductHandler(producer._id)} data-dismiss="modal">Xóa</button>
-                //                     </div>
-                //                 </div>
-                //             </div>
-                //         </div>
-                //     </div>
-                // </Fragment>
+                actions: <Fragment>
+                    <Link to={`/admin/category/${producer._id}`} className="btn btn-primary py-1 px-2">
+                        <i className="fa fa-pencil"></i>
+                    </Link>
+                    <button className="btn btn-danger py-1 px-2 ml-2" data-toggle="modal" data-target="#exampleModal" >
+                        <i className="fa fa-trash"></i>
+                    </button>
+                    {/* model delete */}
+                    <div>
+                        <div className="modal fade" id="exampleModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div className="modal-dialog" role="document">
+                                <div className="modal-content">
+                                    <div className="modal-header">
+                                        <h5 className="modal-title" id="exampleModalLabel">Thông báo!</h5>
+                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Bạn có muốn xóa không
+                                    </div>
+                                    <div className="modal-footer">
+                                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                                        <button type="button" className="btn btn-danger" onClick={() => deleteCategoryHandler(producer._id)} data-dismiss="modal">Xóa</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Fragment>
             })
         })
 

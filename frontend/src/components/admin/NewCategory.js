@@ -41,7 +41,7 @@ const NewCategory = ({ history }) => {
 
     return (
         <Fragment>
-            <MetaData title={'Thêm nhà sản xuất mới'} />
+            <MetaData title={'Thêm nhà thể loại sản phẩm mới'} />
             <div className="row">
                 <div className="col-12 col-md-2">
                     <Sidebar />

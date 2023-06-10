@@ -192,6 +192,12 @@ export const productDetailsReducer = (state = { product: {} }, action) => {
                 error: action.payload
             }
 
+        case 'PRODUCT_DETAILS_RESET':
+            return {
+                ...state,
+                product: {}
+            }
+
         case CLEAR_ERRORS:
             return {
                 ...state,

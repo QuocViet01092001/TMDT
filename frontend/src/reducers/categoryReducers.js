@@ -1,17 +1,8 @@
 import {
-    DELETE_PRODUCT_REQUEST,
-    DELETE_PRODUCT_SUCCESS,
-    DELETE_PRODUCT_RESET,
-    DELETE_PRODUCT_FAIL,
-    UPDATE_PRODUCT_REQUEST,
-    UPDATE_PRODUCT_SUCCESS,
-    UPDATE_PRODUCT_RESET,
-    UPDATE_PRODUCT_FAIL,
     CLEAR_ERRORS
 
 } from '../constants/productConstants'
-// thêm module nhà sản xuất
-//update category
+
 export const categoryReducer = (state = { category: [] }, action) => {
     switch (action.type) {
         case 'ALL_CATEGORY_REQUEST':
@@ -93,24 +84,23 @@ export const newCategoryReducer = (state = { category: {} }, action) => {
     }
 }
 
-export const productReducer = (state = {}, action) => {
+export const categoryUDReducer = (state = {}, action) => {
     switch (action.type) {
-
-        case DELETE_PRODUCT_REQUEST:
-        case UPDATE_PRODUCT_REQUEST:
+        case 'DELETE_CATEGORY_REQUEST':
+        case 'UPDATE_CATEGORY_REQUEST':
             return {
                 ...state,
                 loading: true
             }
 
-        case DELETE_PRODUCT_SUCCESS:
+        case 'DELETE_CATEGORY_SUCCESS':
             return {
                 ...state,
                 loading: false,
                 isDeleted: action.payload
             }
 
-        case UPDATE_PRODUCT_SUCCESS:
+        case 'UPDATE_CATEGORY_SUCCESS':
             return {
                 ...state,
                 loading: false,
@@ -118,23 +108,61 @@ export const productReducer = (state = {}, action) => {
             }
 
 
-        case DELETE_PRODUCT_FAIL:
-        case UPDATE_PRODUCT_FAIL:
+        case 'DELETE_CATEGORY_FAIL':
+        case 'UPDATE_CATEGORY_FAIL':
             return {
                 ...state,
                 error: action.payload
             }
 
-        case DELETE_PRODUCT_RESET:
+        case 'DELETE_CATEGORY_RESET':
             return {
                 ...state,
                 isDeleted: false
             }
 
-        case UPDATE_PRODUCT_RESET:
+        case 'UPDATE_CATEGORY_RESET':
             return {
                 ...state,
                 isUpdated: false
+            }
+
+        case CLEAR_ERRORS:
+            return {
+                ...state,
+                error: null
+            }
+
+        default:
+            return state
+    }
+}
+
+export const categoryDetailsReducer = (state = { category: {} }, action) => {
+    switch (action.type) {
+        case 'CATEGORY_DETAILS_REQUEST':
+            return {
+                ...state,
+                loading: true
+            }
+
+        case 'CATEGORY_DETAILS_SUCCESS':
+            return {
+                ...state,
+                loading: false,
+                category: action.payload
+            }
+
+        case 'CATEGORY_DETAILS_FAIL':
+            return {
+                ...state,
+                error: action.payload
+            }
+
+        case 'CATEGORY_DETAILS_RESET':
+            return {
+                ...state,
+                category: {}
             }
 
         case CLEAR_ERRORS:

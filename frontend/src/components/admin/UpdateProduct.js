@@ -49,8 +49,9 @@ const UpdateProduct = ({ match, history }) => {
             setDescription(product.description);
             setCategory(product.category);
             setSeller(product.seller);
-            setStock(product.stock)
-            setOldImages(product.images)
+            setStock(product.stock);
+            setDiscount(product.discount * 100);
+            setOldImages(product.images);
         }
 
         if (error) {
@@ -68,6 +69,7 @@ const UpdateProduct = ({ match, history }) => {
             history.push('/admin/products');
             alert.success('Product updated successfully');
             dispatch({ type: UPDATE_PRODUCT_RESET })
+            dispatch({ type: 'PRODUCT_DETAILS_RESET' })
         }
 
     }, [dispatch, alert, error, isUpdated, history, updateError, product, productId])
@@ -211,7 +213,7 @@ const UpdateProduct = ({ match, history }) => {
                                         />
                                         <label className='custom-file-label' htmlFor='customFile'>
                                             Chọn hình
-                                 </label>
+                                        </label>
                                     </div>
 
                                     {oldImages && oldImages.map(img => (
@@ -232,7 +234,7 @@ const UpdateProduct = ({ match, history }) => {
                                     disabled={loading ? true : false}
                                 >
                                     Cập nhật
-                            </button>
+                                </button>
 
                             </form>
                         </div>

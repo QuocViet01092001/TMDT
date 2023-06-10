@@ -6,7 +6,8 @@ import { productsReducer, newProductReducer, productReducer, productDetailsReduc
 import { authReducer, userReducer, forgotPasswordReducer, allUsersReducer, userDetailsReducer } from './reducers/userReducers'
 import { cartReducer } from './reducers/cartReducers'
 import { newOrderReducer, myOrdersReducer, orderDetailsReducer, allOrdersReducer, orderReducer, orderDetailsIdReducer } from './reducers/orderReducers'
-import { newCategoryReducer, categoryReducer } from './reducers/categoryReducers';
+import { newCategoryReducer, categoryReducer, categoryUDReducer, categoryDetailsReducer } from './reducers/categoryReducers';
+import { getCategoryDetails } from './actions/categoryActions';
 
 const reducer = combineReducers({
     products: productsReducer,
@@ -25,11 +26,13 @@ const reducer = combineReducers({
     myOrders: myOrdersReducer,
     allOrders: allOrdersReducer,
     orderDetails: orderDetailsReducer,
-    orderDetailsId: orderDetailsIdReducer, // update Orders
+    orderDetailsId: orderDetailsIdReducer,
     order: orderReducer,
     newReview: newReviewReducer,
     newCategory: newCategoryReducer,
-    category: categoryReducer  // update category
+    category: categoryReducer,
+    udCategory: categoryUDReducer,
+    categoryDetails: categoryDetailsReducer
 })
 
 

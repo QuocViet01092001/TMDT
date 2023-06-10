@@ -39,7 +39,7 @@ export const newCategory = (categoryData) => async (dispatch) => {
         }
         //update category
 
-         const { data } = await axios.post(`/api/v1/admin/category/new`, categoryData, config)
+        const { data } = await axios.post(`/api/v1/admin/category/new`, categoryData, config)
 
         dispatch({
             type: 'NEW_CATEGORY_SUCCESS',
@@ -70,6 +70,67 @@ export const getAdminCategory = () => async (dispatch) => {
 
         dispatch({
             type: 'ADMIN_CATEGORY_FAIL',
+            payload: error.response.data.message
+        })
+    }
+}
+
+export const updateCategory = (id, categoryData) => async (dispatch) => {
+    try {
+        dispatch({ type: 'UPDATE_CATEGORY_REQUEST' })
+
+        const config = {
+            header: {
+                'Content-type': 'application/json'
+            }
+        }
+        
+        const { data } = await axios.put(`/api/v1/admin/category/${id}`, categoryData, config)
+
+        dispatch({
+            type: 'UPDATE_CATEGORY_SUCCESS',
+            payload: data.success
+        })
+
+    } catch (error) {
+        dispatch({
+            type: 'UPDATE_CATEGORY_FAIL',
+            payload: error.response.data.message
+        })
+    }
+}
+
+export const deleteCategory = (id) => async (dispatch) => {
+    try {
+        dispatch({ type: 'DELETE_CATEGORY_REQUEST' })
+        const { data } = await axios.delete(`/api/v1/admin/category/${id}`)
+
+        dispatch({
+            type: 'DELETE_CATEGORY_SUCCESS',
+            payload: data.success
+        })
+
+    } catch (error) {
+        dispatch({
+            type: 'DELETE_CATEGORY_FAIL',
+            payload: error.response.data.message
+        })
+    }
+}
+
+export const getCategoryDetails = (id) => async (dispatch) => {
+    try {
+        dispatch({ type: 'CATEGORY_DETAILS_REQUEST' })
+        const { data } = await axios.get(`/api/v1/admin/category/${id}`)
+
+        dispatch({
+            type: 'CATEGORY_DETAILS_SUCCESS',
+            payload: data.category
+        })
+
+    } catch (error) {
+        dispatch({
+            type: 'CATEGORY_DETAILS_FAIL',
             payload: error.response.data.message
         })
     }

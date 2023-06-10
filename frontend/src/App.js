@@ -50,6 +50,7 @@ import { Elements } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import NewCategory from './components/admin/NewCategory'
 import CategoryList from './components/admin/CategoryList'
+import UpdateCategory from './components/admin/updateCategory'
 
 
 //Update category
@@ -115,6 +116,7 @@ function App() {
         <ProtectedRoute path="/admin/product" isAdmin={true} component={NewProduct} exact />
         <ProtectedRoute path="/admin/categories" isAdmin={true} component={CategoryList} exact />
         <ProtectedRoute path="/admin/category" isAdmin={true} component={NewCategory} exact />
+        <ProtectedRoute path="/admin/category/:id" isAdmin={true} component={UpdateCategory} exact />
         <ProtectedRoute path="/admin/product/:id" isAdmin={true} component={UpdateProduct} exact />
         <ProtectedRoute path="/admin/orders" isAdmin={true} component={OrdersList} exact />
         <ProtectedRoute path="/admin/order/:id" isAdmin={true} component={ProcessOrder} exact />
