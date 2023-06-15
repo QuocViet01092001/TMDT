@@ -58,27 +58,31 @@ nav {
 
 /*--------------------------logo--------------------------*/
 .navbar-brand {
-  font-size: 10px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: #f4bc2f;
   text-decoration: none;
-  background-color: #f4bc2f;
+  background-image: linear-gradient(to right, #f4bc2f, #f48f0f);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 165px;
   height: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 
 .navbar-brand a {
   display: block;
   padding: 10px;
-  color: white;
+  color: black;
+  font-size: 1rem;
 }
 
 .navbar-brand a:hover {
-  color: #000;
+  color: white;
 }
 
 /*-----------------------Đăng nhập-------------------------*/
