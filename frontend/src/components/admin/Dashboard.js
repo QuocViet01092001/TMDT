@@ -156,13 +156,13 @@ const Dashboard = () => {
 
                                     <div className="row pr-4">
                                         <div className="col-xl-3 col-sm-6 mb-3">
-                                            <div className="card text-white bg-primary o-hidden h-100">
+                                            <div className="card text-black bg-light o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="text-center card-font-size">Tổng danh thu<br /> 
                                                 <b>{formatCurrency(totalAmount)}</b>                                                    
                                                 </div>
                                                 </div>
-                                                <Link className="card-footer text-white clearfix small z-1" to="/admin/orders">
+                                                <Link className="card-footer text-black clearfix small z-1" to="/admin/orders">
                                                     <span className="float-left">Xem chi tiết</span>
                                                     <span className="float-right">
                                                         <i className="fa fa-angle-right"></i>
@@ -171,11 +171,11 @@ const Dashboard = () => {
                                             </div>
                                         </div>
                                         <div className="col-xl-3 col-sm-6 mb-3">
-                                            <div className="card text-white bg-success o-hidden h-100">
+                                            <div className="card text-black bg-light o-hidden h-100">
                                                 <div className="card-body">
                                                     <div className="text-center card-font-size">Tổng sản phẩm<br /> <b>{products && products.length}</b></div>
                                                 </div>
-                                                <Link className="card-footer text-white clearfix small z-1" to="/admin/products">
+                                                <Link className="card-footer text-black clearfix small z-1" to="/admin/products">
                                                     <span className="float-left">Xem chi tiết</span>
                                                     <span className="float-right">
                                                         <i className="fa fa-angle-right"></i>
@@ -186,11 +186,11 @@ const Dashboard = () => {
 
 
                                         <div className="col-xl-3 col-sm-6 mb-3">
-                                            <div className="card text-white bg-danger o-hidden h-100">
+                                            <div className="card text-black bg-light o-hidden h-100">
                                                 <div className="card-body">
                                                     <div className="text-center card-font-size">Tổng hóa đơn<br /> <b>{orders && orders.length}</b></div>
                                                 </div>
-                                                <Link className="card-footer text-white clearfix small z-1" to="/admin/orders">
+                                                <Link className="card-footer text-black clearfix small z-1" to="/admin/orders">
                                                     <span className="float-left">Xem chi tiết</span>
                                                     <span className="float-right">
                                                         <i className="fa fa-angle-right"></i>
@@ -201,11 +201,11 @@ const Dashboard = () => {
 
 
                                         <div className="col-xl-3 col-sm-6 mb-3">
-                                            <div className="card text-white bg-info o-hidden h-100">
+                                            <div className="card text-black bg-light o-hidden h-100">
                                                 <div className="card-body">
                                                     <div className="text-center card-font-size">Tổng người dùng<br /> <b>{users && users.length}</b></div>
                                                 </div>
-                                                <Link className="card-footer text-white clearfix small z-1" to="/admin/users">
+                                                <Link className="card-footer text-black clearfix small z-1" to="/admin/users">
                                                     <span className="float-left">Xem chi tiết</span>
                                                     <span className="float-right">
                                                         <i className="fa fa-angle-right"></i>

@@ -146,12 +146,14 @@ nav {
 
 .card-title a {
   color: #2e2e2e;
+  font-size: 17px;
 }
 
 .card-title a:hover {
   color: #fa9c23;
   text-decoration: none;
 }
+
 
 .card-body {
   padding-left: 0;
@@ -203,7 +205,6 @@ nav {
 
 /*------------------------Footer---------------------------*/
 footer {
-  margin-top: 8rem;
   color: #000000;
   bottom: 0;
   width: 100%;
@@ -702,11 +703,12 @@ footer {
 
 /*---------------------------------------------*/
 #sidebar {
-  min-width: 100%;
   max-width: 100%;
-  background: #b9b6b6;
+  min-width: 100%;
+  background: white;
   color: #fff;
   transition: all 0.3s;
+  border-right: 1px solid #e0dede;
 }
 
 #sidebar.active {
@@ -733,7 +735,7 @@ footer {
 
 #sidebar ul li a:hover {
   color: #232f3e;
-  background: #fff;
+  background: #f1f1f1;
 }
 
 /*--------------------------------------------*/

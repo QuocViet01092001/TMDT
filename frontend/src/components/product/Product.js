@@ -31,7 +31,7 @@ const Product = ({ product, col }) => {
                 <div className="card-body d-flex flex-column">
                     <h5 className="card-title">
                         <Link to={`/product/${product._id}`}>
-                            <span className="product-name">{truncateString(product.name, 15)}</span>
+                            <span className="product-name">{truncateString(product.name, 30)}</span>
                         </Link>
                     </h5>
                     <div className="ratings mt-auto">
