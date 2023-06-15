@@ -49,11 +49,7 @@ const Product = ({ product, col }) => {
                         ) : (<span className="nodiscount">{(product.price).toLocaleString()}đ</span>
                             )}
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <Link to={`/product/${product._id}`} id="view_btn" className="btn btn-block"><i class="fa fa-eye" aria-hidden="true"><span>&nbsp;</span></i>Xem</Link>
-                        </div>
-                    </div>
+                    
 
                 </div>
             </div>

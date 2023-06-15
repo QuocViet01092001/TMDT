@@ -14,19 +14,19 @@ class Sliderr extends Component {
               </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src="/images/image.jpg" height={500} alt="First slide" />
+                        <img className="d-block w-100" src="https://theme.hstatic.net/200000355547/1000958382/14/home_banner_flashsale.jpg?v=348" height={500} alt="First slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="/images/biia.jpg" height={500} alt="Second slide" />
+                        <img className="d-block w-100" src="https://d3design.vn/uploads/%C3%A9dfjh30.jpg" height={500} alt="Second slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="/images/biiia.jpg" height={500} alt="Third slide" />
+                        <img className="d-block w-100" src="https://i.pinimg.com/originals/fa/45/96/fa4596ad9a9d39901eeb455ed4f74e44.jpg" height={500} alt="Third slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="/images/biaaa.jpg" height={500} alt="Four slide" />
+                        <img className="d-block w-100" src="https://thietke6d.com/wp-content/uploads/2021/05/banner-quang-cao-giay-4.webp" height={500} alt="Four slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="/images/biaaaa.jpg" height={500} alt="Four slide" />
+                        <img className="d-block w-100" src="https://thietke6d.com/wp-content/uploads/2021/05/banner-quang-cao-giay-3.webp" height={500} alt="Four slide" />
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">

@@ -28,7 +28,7 @@ body {
 
 /*------------------------header--------------------------*/
 nav {
-  background-color: #b9b6b6;
+  background-color: #000000;
   padding: 10px;
 
 }
@@ -62,16 +62,18 @@ nav {
   font-weight: bold;
   color: #333;
   text-decoration: none;
+  background-color: #790033;
+  border-radius: 20px;
 }
 
 .navbar-brand a {
   display: block;
   padding: 10px;
-  color: #000;
+  color: white;
 }
 
 .navbar-brand a:hover {
-  color: #ff0000;
+  color: #000;
 }
 
 /*-----------------------Đăng nhập-------------------------*/
@@ -80,7 +82,7 @@ nav {
   /*background-color: #f3f3f3;/*nút button đăng nhập*/
   /*padding: 0.4rem 1.8rem;*/
   font-family: calibri;
-  color: black;
+  color: white;
   font-size: 1rem;
 }
 
@@ -98,7 +100,7 @@ nav {
   /*background-color: #f3f3f3;*/
   /*padding: 1rem 3rem;*/
   /*border-radius: 0.2rem;*/
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -111,10 +113,27 @@ nav {
 #products_heading {
   margin-top: 1.8rem;
 }
-
+/* CSS */
 .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
   height: 100%;
 }
+
+.card:hover {
+  transform: translateY(15px); /* Dịch chuyển xuống 10px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/*Hiệu ứng giảm giá*/
+/* .card .corner-text {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .corner-text {
+  opacity: 1;
+} */
 
 .card-title a {
   color: #2e2e2e;
@@ -148,10 +167,13 @@ nav {
 }
 
 .card-img-top {
-  width: 200px;
-  height: 150px;
+  width: 163px;
+  height: 205px;
+  transition: transform 0.3s ease-in-out;
 }
-
+.card-img-top:hover {
+  transform: scale(1.1); /* Zoom hình ảnh lên 1.1 lần */
+}
 .ratings {
   font-size: 1.2rem;
   color: #fdcc0d;
@@ -1007,3 +1029,5 @@ a {
 /*color: white; /* Màu chữ trên button */
 /* Các thuộc tính khác cho button */
 /*}*/
+
+
