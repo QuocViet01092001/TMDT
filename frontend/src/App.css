@@ -122,6 +122,7 @@ nav {
 #products_heading {
   margin-top: 1.8rem;
 }
+
 /* CSS */
 .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -131,9 +132,11 @@ nav {
 }
 
 .card:hover {
-  transform: translateY(15px); /* Dịch chuyển xuống 10px */
+  transform: translateY(15px);
+  /* Dịch chuyển xuống 10px */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 /*Hiệu ứng giảm giá*/
 /* .card .corner-text {
   opacity: 0;
@@ -146,7 +149,8 @@ nav {
 
 .card-title a {
   color: #2e2e2e;
-  font-size: 17px;
+  text-decoration: none;
+  position: relative;
 }
 
 .card-title a:hover {
@@ -154,6 +158,16 @@ nav {
   text-decoration: none;
 }
 
+.product-name-tooltip {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  white-space: nowrap;
+}
 
 .card-body {
   padding-left: 0;
@@ -164,7 +178,7 @@ nav {
 }
 
 .card.card.p-3.rounded {
-  padding: 0rem!important;
+  padding: 0rem !important;
 }
 
 #view_btn {
@@ -182,9 +196,12 @@ nav {
   height: 205px;
   transition: transform 0.3s ease-in-out;
 }
+
 .card-img-top:hover {
-  transform: scale(1.1); /* Zoom hình ảnh lên 1.1 lần */
+  transform: scale(1.1);
+  /* Zoom hình ảnh lên 1.1 lần */
 }
+
 .ratings {
   font-size: 1.2rem;
   color: #fdcc0d;
@@ -1041,5 +1058,3 @@ a {
 /*color: white; /* Màu chữ trên button */
 /* Các thuộc tính khác cho button */
 /*}*/
-
-

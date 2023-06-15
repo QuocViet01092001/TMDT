@@ -30,7 +30,7 @@ const Product = ({ product, col }) => {
 
                 <div className="card-body d-flex flex-column">
                     <h5 className="card-title">
-                        <Link to={`/product/${product._id}`}>
+                        <Link to={`/product/${product._id}`} title={product.name}>
                             <span className="product-name">{truncateString(product.name, 30)}</span>
                         </Link>
                     </h5>
@@ -47,9 +47,8 @@ const Product = ({ product, col }) => {
                                 <span className="card-text">{((product.price) - (product.price * product.discount)).toLocaleString()}đ</span>
                             </>
                         ) : (<span className="nodiscount">{(product.price).toLocaleString()}đ</span>
-                            )}
+                        )}
                     </div>
-                    
 
                 </div>
             </div>
