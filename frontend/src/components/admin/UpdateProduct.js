@@ -7,13 +7,14 @@ import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateProduct, getProductDetails, clearErrors } from '../../actions/productActions'
 import { UPDATE_PRODUCT_RESET } from '../../constants/productConstants'
+import { getAdminCategory } from '../../actions/categoryActions'
 
 const UpdateProduct = ({ match, history }) => {
 
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
     const [description, setDescription] = useState('');
-    const [category, setCategory] = useState('');
+    const [categoryi, setCategory] = useState('');
     const [stock, setStock] = useState(0);
     const [seller, setSeller] = useState('');
     const [discount, setDiscount] = useState(0);
@@ -22,12 +23,14 @@ const UpdateProduct = ({ match, history }) => {
     const [oldImages, setOldImages] = useState([]);
     const [imagesPreview, setImagesPreview] = useState([])
 
-    const categories = [
-        'Giày Sneakers',
-        'Việt Nam',
-        'Trung Quốc',
-        'Hàn Quốc',
-        'Nhật Bản'
+    const { category } = useSelector(state => state.category)
+
+    const manufacture = [
+        'Nike',
+        'Gucci',
+        'MWC',
+        'JuDo',
+
     ]
 
     const alert = useAlert();
@@ -39,6 +42,7 @@ const UpdateProduct = ({ match, history }) => {
     const productId = match.params.id;
 
     useEffect(() => {
+        dispatch(getAdminCategory())
 
         if (product && product._id !== productId) {
             dispatch(getProductDetails(productId));
@@ -81,7 +85,7 @@ const UpdateProduct = ({ match, history }) => {
         formData.set('name', name);
         formData.set('price', price);
         formData.set('description', description);
-        formData.set('category', category);
+        formData.set('category', categoryi);
         formData.set('stock', stock);
         formData.set('seller', seller);
         formData.set('discount', discount)
@@ -113,7 +117,6 @@ const UpdateProduct = ({ match, history }) => {
             reader.readAsDataURL(file)
         })
     }
-
 
     return (
         <Fragment>
@@ -158,9 +161,9 @@ const UpdateProduct = ({ match, history }) => {
 
                                 <div className="form-group">
                                     <label htmlFor="category_field">Danh mục</label>
-                                    <select className="form-control" id="category_field" value={category} onChange={(e) => setCategory(e.target.value)}>
-                                        {categories.map(category => (
-                                            <option key={category} value={category} >{category}</option>
+                                    <select className="form-control" id="category_field" value={categoryi} onChange={(e) => setCategory(e.target.value)}>
+                                        {category.map(categoryId => (
+                                            <option key={categoryId._id} value={categoryId._id} >{categoryId.name}</option>
                                         ))}
 
                                     </select>
@@ -188,14 +191,17 @@ const UpdateProduct = ({ match, history }) => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="seller_field">Xuất sứ</label>
-                                    <input
+                                    <label htmlFor="seller_field">Xuất xứ</label>
+                                    <select
                                         type="text"
                                         id="seller_field"
                                         className="form-control"
                                         value={seller}
-                                        onChange={(e) => setSeller(e.target.value)}
-                                    />
+                                        onChange={(e) => setSeller(e.target.value)}>
+                                        {manufacture.map((manufactureId) => (
+                                            <option key={manufactureId} value={manufactureId}>{manufactureId}</option>
+                                        ))}
+                                    </select>
                                 </div>
 
                                 <div className='form-group'>
