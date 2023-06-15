@@ -51,7 +51,7 @@ const NewCategory = ({ history }) => {
                     <Fragment>
                         <div className="wrapper my-5">
                             <form className="shadow-lg" onSubmit={submitHandler}>
-                                <h1 className="mb-4">Thông tin nhà sản xuất</h1>
+                                <h1 className="mb-4">Thông tin danh mục sản phẩm</h1>
                                 <div className="form-group">
                                     <label htmlFor="name_field">Tên:</label>
                                     <input type="text" id="name" className="form-control" value={name} onChange={e => setName(e.target.value)} 

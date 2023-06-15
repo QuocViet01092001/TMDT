@@ -98,34 +98,25 @@ const Dashboard = () => {
     let giay_cho_tre_em = 0;
     products &&
         products.forEach((product) => {
-            if (product.category === "Giày Sneakers") {
-                giay_sneaker += 1;
-            }
-            if (product.category === "Giày Casual") {
+            if (product.category === "Việt Nam") {
                 giay_casual += 1;
             }
-            if (product.category === "Giày Sandal") {
+            if (product.category === "Trung Quốc") {
                 giay_sandal += 1;
             }
-            if (product.category === "Giày Boots") {
+            if (product.category === "Hàn Quốc") {
                 giay_boots += 1;
             }
-            if (product.category === "Giày công sở") {
+            if (product.category === "Nhật Bản") {
                 giay_cong_so += 1;
-            }
-            if (product.category === "Giày cho trẻ em") {
-                giay_cho_tre_em += 1;
             }
         });
     const data = {
         labels: [
-            
-                'Giày Sneakers',
-                'Giày Casual',
-                'Giày Sandal',
-                'Giày Boots',
-                'Giày công sở',
-                'Giày cho trẻ em',
+            'Việt Nam',
+            'Trung Quốc',
+            'Hàn Quốc',
+            'Nhật Bản'
         ],
         datasets: [{
             label: 'Danh mục sản phẩm',

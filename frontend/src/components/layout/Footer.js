@@ -44,12 +44,10 @@ const Footer = () => {
                 <div className="single-footer links">
                   <h6>THƯƠNG HIỆU</h6>
                   <ul>
-                    <li><Link to=''>Giày Sneaker</Link></li>
-                    <li><Link to=''>Giày Casual</Link></li>
-                    <li><Link to=''>Giày Sandal</Link></li>
-                    <li><Link to=''>Giày Boots</Link></li>
-                    <li><Link to=''>Giày Công Sở</Link></li>
-                    <li><Link to=''>Giày Cho Trẻ Em</Link></li>
+                    <li><Link to=''>Việt Nam</Link></li>
+                    <li><Link to=''>Trung Quốc</Link></li>
+                    <li><Link to=''>Hàn Quốc</Link></li>
+                    <li><Link to=''>Nhật Bản</Link></li>
                   </ul>
                 </div>
                 {/* End Single Widget */}

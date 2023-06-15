@@ -22,12 +22,10 @@ const NewProduct = ({ history }) => {
     const [imagesPreview, setImagesPreview] = useState([])
 
     const producers = [
-        'Giày Sneakers',
-                'Giày Casual',
-                'Giày Sandal',
-                'Giày Boots',
-                'Giày công sở',
-                'Giày cho trẻ em',
+        'Việt Nam',
+        'Trung Quốc',
+        'Hàn Quốc',
+        'Nhật Bản'
     ]
 
     const alert = useAlert();
@@ -154,7 +152,7 @@ const NewProduct = ({ history }) => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="seller_field">Nhà sản xuất</label>
+                                    <label htmlFor="seller_field">Xuất sứ</label>
                                     <select className='form-control' id='seller_field' value={seller} onChange ={(e)=> setSeller(e.target.value)}>
                                             { producers.map(producer => (
                                                 <option key= {producer} value={producer}>{producer}</option>

@@ -24,11 +24,10 @@ const UpdateProduct = ({ match, history }) => {
 
     const categories = [
         'Giày Sneakers',
-        'Giày Casual',
-        'Giày Sandal',
-        'Giày Boots',
-        'Giày công sở',
-        'Giày cho trẻ em'
+        'Việt Nam',
+        'Trung Quốc',
+        'Hàn Quốc',
+        'Nhật Bản'
     ]
 
     const alert = useAlert();
@@ -189,7 +188,7 @@ const UpdateProduct = ({ match, history }) => {
                                 </div>
 
                                 <div className="form-group">
-                                    <label htmlFor="seller_field">Xuất xứ</label>
+                                    <label htmlFor="seller_field">Xuất sứ</label>
                                     <input
                                         type="text"
                                         id="seller_field"
