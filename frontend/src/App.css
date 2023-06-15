@@ -58,12 +58,17 @@ nav {
 
 /*--------------------------logo--------------------------*/
 .navbar-brand {
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
-  background-color: #790033;
+  background-color: #f4bc2f;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
 }
 
 .navbar-brand a {
@@ -195,10 +200,11 @@ nav {
 /*------------------------Footer---------------------------*/
 footer {
   margin-top: 8rem;
-  color: black;
+  color: #000000;
   bottom: 0;
   width: 100%;
-  background-color: #b9b6b6;
+  background-color: white;
+  border-top: 1px solid #e0dede;
 }
 
 .text a {
@@ -218,7 +224,7 @@ footer {
 }
 
 .single-footer li a {
-  color: black;
+  color: #000000;
 }
 
 .single-footer li a:hover {
@@ -240,7 +246,7 @@ footer {
 .logo a {
   display: block;
   padding: 10px;
-  color: #000;
+  color: #000000;
 }
 
 .logo a:hover {
